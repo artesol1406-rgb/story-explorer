@@ -1,6 +1,10 @@
 # Mandala Fractal Narrativo — Remix
 
-Adapt the reference app (https://story-fractal-explorer.lovable.app) into this project. Keep its dark, golden "cyber-occult" mandala aesthetic and three-panel layout, add the requested remix features: bilingual ES/EN toggle, both hardcoded reference sets and seed-generated mapping, PDF export, and node drill-in.
+&nbsp;
+
+Ask me for the zip with the repo first. Then organize everything 
+
+Adapt the reference app ([https://story-fractal-explorer.lovable.app](https://story-fractal-explorer.lovable.app)) into this project. Keep its dark, golden "cyber-occult" mandala aesthetic and three-panel layout, add the requested remix features: bilingual ES/EN toggle, both hardcoded reference sets and seed-generated mapping, PDF export, and node drill-in.
 
 This is a client-side generative tool — no auth, no database, no Lovable Cloud. All logic runs in the browser.
 
@@ -54,12 +58,14 @@ Three-column desktop layout collapsing to stacked panels on mobile; a thin heade
 ## Data model
 
 Hardcoded reference sets (each entry bilingual ES/EN), in `src/lib/narrative-data.ts`:
+
 - 12 Hero's Journey stations (Mundo ordinario → Elíxir) with meaning.
 - 7 chakras (root → crown) with color + meaning.
 - 22 tarot major arcana (El Loco → El Mundo) with meaning.
 - 32 personality nodes (named archetypes) with meaning.
 
 Seed-generated mapping in `src/lib/mandala.ts`:
+
 - `stringHash(seed)` → mulberry32 PRNG.
 - Assign each station one arcana, one chakra, one personality node by PRNG draw (no repeats within a category where the set is large enough).
 - Derive the canvas geometry (ring counts, radii, colors, station angles) from the same PRNG + the sliders.
